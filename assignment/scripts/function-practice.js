@@ -55,14 +55,18 @@ console.log( 'isPositive - should say false', isPositive(-3) );
 
 // 6. Function to return the _last_ item in an array. If the
 //    array is empty, return `undefined`.
+let array = [];
+let lastItem = array.pop();
+
 function getLast( array ) {
-  if (true) {
-    return ;
+  if ( lastItem == -1) {
+    return 'undefined';
   } else {
-    return ;
+    return lastItem;
   }
 }
 
+console.log(getLast(1,2,3));
 // 7. Function to find a value in an array. Return true if the
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find
