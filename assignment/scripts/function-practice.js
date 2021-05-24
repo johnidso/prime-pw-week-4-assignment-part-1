@@ -70,9 +70,24 @@ console.log('the last number is',getLast(1, 4, 6))
 // 7. Function to find a value in an array. Return true if the
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find
-function find( value, array ){
 
+let array = [1, 5, 7, 8];
+
+function findValue(value) {
+  for (i of array) {
+    if (i == value) {
+      console.log('The array contains', value);
+      return true;
+    } else {
+      continue; // is there a better way to do this? returning false breaks
+                // the loop before I've checked the whole array for the value
+    }
+  }
+  console.log('the array does not contain', value);
+  return false;
 }
+
+console.log(findValue(8));
 
 // ----------------------
 // Stretch Goals
