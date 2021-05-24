@@ -49,14 +49,18 @@ function isPositive( number ) {
 // Write a separate console.log statement for each outcome
 console.log( 'isPositive - should say true', isPositive(3) );
 console.log( 'isPositive - should say true', isPositive(0) ); // originally this
-// said 'should say false' but based on the instruction from 5), it should be true. 
+// said 'should say false' but based on the instruction from 5), it should be true.
 console.log( 'isPositive - should say false', isPositive(-3) );
 
 
 // 6. Function to return the _last_ item in an array. If the
 //    array is empty, return `undefined`.
 function getLast( array ) {
-
+  if (true) {
+    return ;
+  } else {
+    return ;
+  }
 }
 
 // 7. Function to find a value in an array. Return true if the
