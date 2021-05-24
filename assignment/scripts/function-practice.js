@@ -71,7 +71,7 @@ console.log('the last number is',getLast(1, 4, 6))
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find
 
-let array = [1, 5, 7, 8];
+const array = [1, 5, 7, 8];
 
 function findValue(value) {
   for (i of array) {
@@ -95,23 +95,43 @@ console.log(findValue(8));
 // 8. Function to check if a letter is the first letter in a
 //    string. Return true if it is, and false otherwise
 function isFirstLetter(letter, string) {
-
+  if (string.charAt(0) === letter) {
+    return true;
+  } else {
+    return false;
+  }
 }
 console.log( 'isFirstLetter - should say true', isFirstLetter('a', 'apple') );
 console.log( 'isFirstLetter - should say false', isFirstLetter('z', 'apple') );
 
 // 9. Function to return the sum of all numbers in an array
-function sumAll( ) {
-  let sum = 0
-  // TODO: loop to add items
+function sumAll( ...integers ) {
+  let sum = 0;
+  for (i of integers) {
+    sum += i;
+  }
   return sum;
 }
+
+console.log('The sum is', sumAll( 1, 4, 4, 5, 10, 68));
 
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
 
+function positiveOnly( ...integers ) {
+  let positiveArray = [];
+  for (i of integers) {
+    if (i > 0) {
+      positiveArray.push(i);
+    } else {
+      continue;
+    }
+  } return positiveArray;
+}
 
+console.log('negative and positive array', positiveOnly(-3, 4, -1, 7, -98, 86, 2));
+console.log('negative only test array', positiveOnly(-3, -1, -98));
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or
 //     CodeWars(https://www.codewars.com/). Then describe it
