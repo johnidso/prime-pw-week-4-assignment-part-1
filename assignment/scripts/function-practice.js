@@ -137,4 +137,25 @@ console.log('negative only test array', positiveOnly(-3, -1, -98));
 //     CodeWars(https://www.codewars.com/). Then describe it
 //     here in a comment, write the function, and test it!
 
-// https://edabit.com/challenge/b7iHQDw72zzkmgCun
+// instructions found here: https://edabit.com/challenge/r6TSNwkLZ2DgsoKiH
+// create a function that determines whether the sum of the numbers in the parameter
+// is odd or even.
+
+
+function oddishOrEvenish(number) {
+  let numberString = number.toString();
+  let array = numberString.split("");
+  let sum = 0;
+  for (i of array) {
+    sum += parseInt(i);
+  } if (sum % 2 == 0) {
+    console.log('The number is evenish');
+    return 'Evenish';
+  } else {
+    console.log('The number is oddish');
+    return 'Oddish';
+  }
+} // end function oddishOrEvenish
+
+console.log('Oddish:', oddishOrEvenish(432));
+console.log('Evenish:', oddishOrEvenish(43443));
