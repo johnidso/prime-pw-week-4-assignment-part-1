@@ -109,7 +109,7 @@ console.log( 'isFirstLetter - should say false', isFirstLetter('z', 'apple') );
 // 9. Function to return the sum of all numbers in an array
 function sumAll( ...integers ) {
   let sum = 0;
-  for (integer of integers) {
+  for (let integer of integers) {
     sum += integer;
   }
   return sum;
@@ -123,9 +123,9 @@ console.log('The sum is', sumAll( 1, 4, 4, 5, 10, 68));
 
 function positiveOnly( ...integers ) {
   let positiveArray = [];
-  for (i of integers) {
-    if (i > 0) {
-      positiveArray.push(i);
+  for (let integer of integers) {
+    if (integer > 0) {
+      positiveArray.push(integer);
     } else {
       continue;
     }
@@ -148,8 +148,8 @@ function oddishOrEvenish(number) {
   let numberString = number.toString();   // I could probably be using fewer variables...
   let array = numberString.split("");
   let sum = 0;
-  for (i of array) {
-    sum += parseInt(i);
+  for (let integer of array) {
+    sum += parseInt(integer);
   } if (sum % 2 == 0) {
     console.log('The number is evenish');
     return 'Evenish';
