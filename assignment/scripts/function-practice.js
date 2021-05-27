@@ -15,11 +15,11 @@ console.log('Test - should say "Hello World!"', hello());
 // 2. Function to return an personalized hello, using the `name` argument.
 //    for example 'Hello, Jo!', or 'Hello, Stacy!'
 function helloName( name ) {
-  return name;
+  return `Hello, ${name}!`;
 }
 // Remember to call the function to test
 
-console.log( 'Hello', helloName( 'John' ) );
+console.log( helloName( 'John' ) );
 
 // 3. Function to add two numbers together & return the result
 function addNumbers( firstNumber, secondNumber ) {
@@ -66,6 +66,7 @@ function getLast( ...array ) {  // I wanted to make this accept an undefined num
 }
 
 console.log('the last number is',getLast(1, 4, 6))
+console.log('the last number is',getLast())
 
 // 7. Function to find a value in an array. Return true if the
 //    value is found and false otherwise. Use a loop;
@@ -74,20 +75,21 @@ console.log('the last number is',getLast(1, 4, 6))
 const array = [1, 5, 7, 8];
 
 function findValue(value) {
-  for (i of array) {
-    if (i == value) {
+  for (let n of array) {
+    if (n == value) {
       console.log('The array contains', value);
       return true;
     } else {
       continue; // is there a better way to do this? returning false breaks
-                // the loop before I've checked the whole array for the value
+                // the loop before I've checked the whole array for the value.
     }
   }
-  console.log('the array does not contain', value);
+  console.log('The array does not contain', value);
   return false;
 }
 
 console.log(findValue(8));
+console.log(findValue(9));
 
 // ----------------------
 // Stretch Goals
@@ -107,8 +109,8 @@ console.log( 'isFirstLetter - should say false', isFirstLetter('z', 'apple') );
 // 9. Function to return the sum of all numbers in an array
 function sumAll( ...integers ) {
   let sum = 0;
-  for (i of integers) {
-    sum += i;
+  for (integer of integers) {
+    sum += integer;
   }
   return sum;
 }
@@ -143,7 +145,7 @@ console.log('negative only test array', positiveOnly(-3, -1, -98));
 
 
 function oddishOrEvenish(number) {
-  let numberString = number.toString();
+  let numberString = number.toString();   // I could probably be using fewer variables...
   let array = numberString.split("");
   let sum = 0;
   for (i of array) {
