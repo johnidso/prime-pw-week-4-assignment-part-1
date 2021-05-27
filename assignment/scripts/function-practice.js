@@ -126,9 +126,7 @@ function positiveOnly( ...integers ) {
   for (let integer of integers) {
     if (integer > 0) {
       positiveArray.push(integer);
-    } else {
-      continue;
-    }
+    } 
   } return positiveArray;
 }
 
